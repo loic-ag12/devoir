@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voyages & Services - Accueil</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #0077b6;
+      --accent: #00b4d8;
+      --light: #caf0f8;
+      --dark: #03045e;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    header.navbar {
+      background: rgba(3, 4, 94, 0.9);
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.25rem;
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 2rem 0;
+    }
+    footer a { color: var(--light); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Voyages & Services</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#billets">Billets d’avion</a></li>
+          <li class="nav-item"><a class="nav-link" href="#visas">Visas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#commerce">Commerce</a></li>
+          <li class="nav-item"><a class="btn btn-accent ms-2" href="#contact">Contact</a></li>
+         <a href=""></a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content text-white">
+      <h1>Voyagez sans souci</h1>
+      <p>Billets d’avion, visas, commerce – tout en un seul endroit.</p>
+      <a href="#billets" class="btn btn-lg btn-primary mt-3">Réservez maintenant</a>
+    </div>
+  </section>
+
+  <!-- Billets -->
+  <section id="billets" class="bg-light fade-in">
+    <div class="container">
+      <h2 class="text-center mb-4">Réservation de billets d’avion</h2>
+      <form class="row g-3">
+        <div class="col-md-3">
+          <input type="text" class="form-control" placeholder="Ville de départ">
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control" placeholder="Destination">
+        </div>
+        <div class="col-md-2">
+          <input type="date" class="form-control">
+        </div>
+        <div class="col-md-2">
+          <input type="date" class="form-control">
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-primary w-100">Rechercher</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Visas -->
+  <section id="visas" class="fade-in">
+    <div class="container text-center">
+      <h2 class="mb-4">Obtention de visas simplifiée</h2>
+      <p>Nous vous accompagnons dans toutes les démarches pour vos voyages à l’étranger.</p>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Visa Europe">
+            <div class="card-body">
+              <h5 class="card-title">Visa Europe</h5>
+              <p class="card-text">Accompagnement rapide pour vos voyages en Europe.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Visa USA">
+            <div class="card-body">
+              <h5 class="card-title">Visa USA</h5>
+              <p class="card-text">Simplifiez vos démarches pour voyager aux États-Unis.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Visa Afrique">
+            <div class="card-body">
+              <h5 class="card-title">Visa Afrique</h5>
+              <p class="card-text">Un suivi personnalisé pour vos déplacements en Afrique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commerce -->
+  <section id="commerce" class="bg-light fade-in">
+    <div class="container text-center">
+      <h2 class="mb-4">Commerce général</h2>
+      <p>Découvrez notre catalogue de produits diversifiés pour particuliers et entreprises.</p>
+      <div class="row mt-4">
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Produit 1">
+            <div class="card-body">
+              <h5 class="card-title">Produit 1</h5>
+              <p class="card-text">Description courte.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Produit 2">
+            <div class="card-body">
+              <h5 class="card-title">Produit 2</h5>
+              <p class="card-text">Description courte.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Produit 3">
+            <div class="card-body">
+              <h5 class="card-title">Produit 3</h5>
+              <p class="card-text">Description courte.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1616628182508-dc00e0fdb59e?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Produit 4">
+            <div class="card-body">
+              <h5 class="card-title">Produit 4</h5>
+              <p class="card-text">Description courte.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container text-center">
+      <h5>Contactez-nous</h5>
+      <p>Email : contact@voyages-services.com | Tél : +237 699 00 00 00</p>
+      <div>
+        <a href="#"><i class=" bi-facebook fs-4 mx-2"></i></a>
+        <a href="#"><i class=" bi-instagram fs-4 mx-2"></i></a>
+        <a href="#"><i class=" bi-whatsapp fs-4 mx-2"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    faders.forEach(fader => observer.observe(fader));
+  </script>
+</body>
+</html>
